@@ -1,4 +1,35 @@
+import { useEffect } from "react";
+
 export function Welcome({ message }: { message: string }) {
+	useEffect(() => {
+		if (typeof window === "undefined") return;
+
+		const win = window as Window & {
+			BrevoConversations?: ((...args: unknown[]) => void) & {
+				q?: unknown[][];
+			};
+			BrevoConversationsID?: string;
+		};
+
+		if (win.BrevoConversations) return;
+
+		win.BrevoConversationsID = "6a34ac3086063d4ba106f8f1";
+		win.BrevoConversations =
+			win.BrevoConversations ||
+			function (...args: unknown[]) {
+				const queue = win.BrevoConversations;
+				if (!queue) return;
+				(queue.q = queue.q || []).push(args);
+			};
+
+		const script = document.createElement("script");
+		script.async = true;
+		script.src = "https://conversations-widget.brevo.com/brevo-conversations.js";
+		if (document.head) {
+			document.head.appendChild(script);
+		}
+	}, []);
+
 	const featuredProjects = [
 		{
 			title: "MD5 Tools",
