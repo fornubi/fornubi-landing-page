@@ -66,21 +66,15 @@ export function Welcome({ message }: { message: string }) {
 	];
 
 	const highlights = [
-		"Premium positioning for modern brands",
-		"Clear UX storytelling that converts",
-		"High-end systems built for scale",
-	];
-
-	const projectManagement = [
-		"Brand strategy & message clarity",
-		"UX concept & interface direction",
-		"Build, refine, and launch",
+		"Brand positioning with clarity",
+		"Minimal UX that feels premium",
+		"Systems designed to scale with ease",
 	];
 
 	const projectSteps = [
-		{ step: "01", title: "Discover", text: "Mendalami kebutuhan brand, audience, dan celah pasar yang paling relevan untuk tumbuh." },
-		{ step: "02", title: "Design", text: "Menciptakan pengalaman premium yang terasa jelas, elegan, dan mudah dijalani pengguna." },
-		{ step: "03", title: "Deliver", text: "Mengembangkan produk jadi dan memastikan siap hadir dengan kualitas yang konsisten." },
+		{ step: "01", title: "Discover", text: "Mendalami kebutuhan brand, audiens, dan peluang yang paling relevan untuk tumbuh." },
+		{ step: "02", title: "Refine", text: "Menyusun pengalaman yang terlihat elegan, jelas, dan mudah dipahami pengguna." },
+		{ step: "03", title: "Deliver", text: "Mengembangkan produk jadi dan menyiapkan peluncuran yang konsisten dan siap berdampak." },
 	];
 
 	return (
@@ -89,7 +83,7 @@ export function Welcome({ message }: { message: string }) {
 				@keyframes revealUp {
 					0% {
 						opacity: 0;
-						transform: translateY(20px);
+						transform: translateY(30px);
 					}
 					100% {
 						opacity: 1;
@@ -97,218 +91,181 @@ export function Welcome({ message }: { message: string }) {
 					}
 				}
 
-				@keyframes drift {
-					0%, 100% {
-						transform: translateY(0px);
-					}
-					50% {
-						transform: translateY(-8px);
-					}
-				}
-
-				@keyframes glowPulse {
-					0%, 100% {
-						box-shadow: 0 0 0 rgba(148, 163, 184, 0.15);
-					}
-					50% {
-						box-shadow: 0 0 0 8px rgba(148, 163, 184, 0.08);
-					}
-				}
-
 				.reveal {
-					animation: revealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+					animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 				}
 
 				.reveal-delay {
-					animation: revealUp 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
-				}
-
-				.float-card {
-					animation: drift 7s ease-in-out infinite;
-				}
-
-				.glow-dot {
-					animation: glowPulse 3s ease-in-out infinite;
+					animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 				}
 			`}</style>
-			<main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(203,213,225,0.30),_transparent_28%),linear-gradient(135deg,#f5f1ea_0%,#f8fafc_42%,#eef2f7_100%)] text-slate-900 dark:bg-[radial-gradient(circle_at_top,_rgba(96,165,250,0.14),_transparent_25%),linear-gradient(135deg,#060b16_0%,#0f172a_32%,#111827_100%)] dark:text-slate-100">
-				<section className="mx-auto flex w-full max-w-[1280px] flex-col gap-8 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
-					<header className="reveal flex flex-wrap items-center justify-between gap-4 rounded-full border border-slate-200/80 bg-white/70 px-5 py-3 shadow-[0_18px_45px_rgba(15,23,42,0.04)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/75">
+			<main className="min-h-screen bg-white text-[#111111]">
+				{/* Sticky Navigation */}
+				<nav className="fixed top-0 left-0 right-0 z-50 border-b border-[#e8e8e8] bg-white/95 backdrop-blur-md">
+					<div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
 						<div>
-							<p className="text-[10px] font-medium uppercase tracking-[0.45em] text-slate-500 dark:text-slate-400">fornubi</p>
-							<h1 className="mt-1 text-base font-medium text-slate-900 dark:text-white">Brand • Product • Experience</h1>
+							<h1 className="text-lg font-bold text-[#111111]">fornubi</h1>
+							<p className="text-xs text-[#888888]">Brand • Product • Experience</p>
 						</div>
-						<nav className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
-							<a className="rounded-full px-3 py-2 transition hover:bg-slate-100 dark:hover:bg-slate-800" href="#about">About</a>
-							<a className="rounded-full px-3 py-2 transition hover:bg-slate-100 dark:hover:bg-slate-800" href="#services">Services</a>
-							<a className="rounded-full px-3 py-2 transition hover:bg-slate-100 dark:hover:bg-slate-800" href="#portfolio">Work</a>
-							<a className="rounded-full bg-slate-900 px-4 py-2 text-white shadow-lg shadow-slate-900/10 transition hover:bg-slate-700 dark:bg-sky-400 dark:text-slate-950 dark:hover:bg-sky-300" href="#contact">Contact</a>
-						</nav>
-					</header>
-
-					<section className="reveal-delay grid items-center gap-6 overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white/80 p-6 shadow-[0_35px_90px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80 lg:grid-cols-[1.15fr_0.85fr] lg:p-8">
-						<div className="space-y-7">
-							<div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.3em] text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
-								<span className="glow-dot h-2.5 w-2.5 rounded-full bg-emerald-500" />
-								Luxury digital experiences
-							</div>
-							<h2 className="max-w-xl text-4xl font-semibold tracking-[-0.08em] text-slate-900 dark:text-white lg:text-6xl">
-								Design that feels premium and performs with intent.
-							</h2>
-							<p className="max-w-xl text-base leading-7 text-slate-600 dark:text-slate-300 lg:text-lg">
-								fornubi builds polished web products, digital experiences, and brand systems that look elevated and convert with clarity.
-							</p>
-							<div className="flex flex-wrap gap-3">
-								<a className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_35px_rgba(15,23,42,0.15)] transition hover:-translate-y-0.5 hover:bg-slate-700 dark:bg-sky-400 dark:text-slate-950 dark:hover:bg-sky-300" href="/cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
-								<a className="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800" href="#contact">Book a call</a>
-							</div>
-							<div className="flex flex-wrap gap-7 pt-2 text-sm text-slate-600 dark:text-slate-300">
-								<div>
-									<p className="text-2xl font-semibold text-slate-900 dark:text-white">12+</p>
-									<p>projects launched</p>
-								</div>
-								<div>
-									<p className="text-2xl font-semibold text-slate-900 dark:text-white">3–6w</p>
-									<p>delivery window</p>
-								</div>
-								<div>
-									<p className="text-2xl font-semibold text-slate-900 dark:text-white">100%</p>
-									<p>custom direction</p>
-								</div>
-							</div>
+						<div className="flex items-center gap-6 text-sm text-[#555555]">
+							<a className="transition hover:text-[#111111]" href="#about">About</a>
+							<a className="transition hover:text-[#111111]" href="#services">Services</a>
+							<a className="transition hover:text-[#111111]" href="#work">Work</a>
+							<a className="rounded-full bg-[#111111] px-5 py-2 text-white transition hover:bg-[#2a2a2a]" href="#contact">Get Started</a>
 						</div>
+					</div>
+				</nav>
 
-						<aside className="float-card relative rounded-[1.8rem] border border-slate-700 bg-slate-950 p-5 text-slate-100 shadow-[0_30px_80px_rgba(15,23,42,0.18)]">
-							<div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(251,191,36,0.12),_transparent_35%)]" />
-							<div className="relative space-y-4">
-								<div className="rounded-2xl border border-slate-800 bg-slate-900/90 p-4">
-									<p className="text-[10px] font-medium uppercase tracking-[0.35em] text-slate-400">Core focus</p>
-									<p className="mt-2 text-2xl font-semibold text-white">Strategy • Design • Build</p>
+				{/* Main Content */}
+				<section className="pt-24">
+					{/* Hero Section */}
+					<section className="reveal relative overflow-hidden bg-gradient-to-br from-white via-white to-[#f5f5f5] px-4 py-24 sm:px-6 lg:px-8">
+						<div className="mx-auto max-w-4xl">
+							<div className="space-y-8">
+								<div className="inline-block rounded-full border border-[#e0e0e0] bg-[#fafafa] px-4 py-2 text-sm text-[#666666]">
+									✨ Digital experiences that stand out
 								</div>
-								<div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-									<div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-										<p className="text-[10px] uppercase tracking-[0.3em] text-slate-400">Brand</p>
-										<p className="mt-2 text-lg font-medium text-white">Positioning & story</p>
-									</div>
-									<div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4">
-										<p className="text-[10px] uppercase tracking-[0.3em] text-slate-400">UX</p>
-										<p className="mt-2 text-lg font-medium text-white">Conversion-first flow</p>
-									</div>
+								<h2 className="text-6xl font-black tracking-[-0.04em] text-[#111111] lg:text-7xl">
+									Premium digital products, crafted with intent.
+								</h2>
+								<p className="max-w-2xl text-xl leading-8 text-[#555555]">
+									We build brand systems, web products, and digital experiences that feel premium, perform with clarity, and convert with purpose.
+								</p>
+								<div className="flex flex-wrap gap-4 pt-4">
+									<a className="rounded-lg bg-[#111111] px-7 py-4 text-base font-semibold text-white transition hover:bg-[#2a2a2a]" href="#contact">Start Your Project</a>
+									<a className="rounded-lg border border-[#ddd] px-7 py-4 text-base font-semibold text-[#111111] transition hover:bg-[#f8f8f8]" href="/cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
 								</div>
 							</div>
-						</aside>
-					</section>
-
-					<section id="about" className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-						<div className="rounded-[2rem] border border-slate-200/80 bg-white/80 p-6 shadow-[0_20px_45px_rgba(15,23,42,0.04)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80">
-							<p className="text-[10px] font-medium uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">About</p>
-							<h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-slate-900 dark:text-white">A sharper digital presence for brands that want to stand out.</h3>
-							<p className="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300">We blend strategic thinking, design clarity, and practical development to create digital experiences that feel premium and perform with purpose.</p>
-						</div>
-						<div className="grid gap-4 sm:grid-cols-3">
-							{highlights.map((item) => (
-								<div key={item} className="rounded-[1.7rem] border border-slate-200/80 bg-white/80 p-5 shadow-[0_18px_35px_rgba(15,23,42,0.03)] dark:border-slate-800 dark:bg-slate-950/80">
-									<p className="text-base leading-7 text-slate-700 dark:text-slate-200">{item}</p>
-								</div>
-							))}
 						</div>
 					</section>
 
-					<section id="services" className="grid gap-6 lg:grid-cols-[1fr_1fr]">
-						<div className="rounded-[2rem] border border-slate-200/80 bg-white/80 p-6 shadow-[0_20px_45px_rgba(15,23,42,0.04)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80">
-							<p className="text-[10px] font-medium uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">Capabilities</p>
-							<h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-slate-900 dark:text-white">Built for modern brands that need clarity, speed, and polish.</h3>
-							<div className="mt-5 flex flex-wrap gap-2">
+					{/* About Section */}
+					<section id="about" className="reveal-delay border-t border-[#f0f0f0] px-4 py-20 sm:px-6 lg:px-8">
+						<div className="mx-auto max-w-4xl space-y-16">
+							<div>
+								<p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#888888]">About fornubi</p>
+								<h3 className="text-4xl font-black text-[#111111]">We bring clarity to your brand story.</h3>
+								<p className="mt-6 text-xl leading-8 text-[#555555]">
+									From positioning and strategy to product design and development, we help ambitious brands create digital experiences that feel premium and drive real results.
+								</p>
+							</div>
+
+							<div className="grid gap-8 sm:grid-cols-3">
+								{highlights.map((item) => (
+									<div key={item} className="space-y-3">
+										<div className="h-1 w-12 bg-[#111111]" />
+										<p className="text-base font-semibold text-[#111111]">{item}</p>
+									</div>
+								))}
+							</div>
+						</div>
+					</section>
+
+					{/* Services Section */}
+					<section id="services" className="reveal-delay border-t border-[#f0f0f0] bg-[#f8f8f8] px-4 py-20 sm:px-6 lg:px-8">
+						<div className="mx-auto max-w-4xl">
+							<p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#888888]">Services</p>
+							<h3 className="mb-12 text-4xl font-black text-[#111111]">What we build</h3>
+
+							<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+								{[
+									{ icon: "🎨", title: "Brand Systems", desc: "Strategic positioning, visual identity, and design language" },
+									{ icon: "💻", title: "Web Products", desc: "High-converting websites and digital platforms" },
+									{ icon: "📱", title: "Digital Experiences", desc: "Apps, dashboards, and interactive solutions" },
+								].map((service, idx) => (
+									<div key={idx} className="space-y-4">
+										<div className="text-3xl">{service.icon}</div>
+										<h4 className="text-lg font-bold text-[#111111]">{service.title}</h4>
+										<p className="text-sm text-[#666666]">{service.desc}</p>
+									</div>
+								))}
+							</div>
+
+							<div className="mt-12 flex flex-wrap gap-3">
 								{stackPills.map((item) => (
-									<span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">{item}</span>
+									<span key={item} className="rounded-full bg-white px-4 py-2 text-sm font-medium text-[#333333]">{item}</span>
 								))}
 							</div>
 						</div>
-						<div className="rounded-[2rem] border border-slate-200/80 bg-slate-900 p-6 text-slate-100 shadow-[0_30px_80px_rgba(15,23,42,0.12)] dark:border-slate-800 dark:bg-slate-950">
-							<p className="text-[10px] font-medium uppercase tracking-[0.35em] text-sky-300">Services</p>
-							<h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-white">What we build</h3>
-							<ul className="mt-5 space-y-3 text-slate-200">
-								<li>• High-converting marketing websites</li>
-								<li>• Product dashboards and business tools</li>
-								<li>• Mobile + desktop application systems</li>
-							</ul>
-						</div>
 					</section>
 
-					<section id="projects" className="grid gap-6 lg:grid-cols-[1fr_1fr]">
-						<div className="rounded-[2rem] border border-slate-200/80 bg-white/80 p-6 shadow-[0_20px_45px_rgba(15,23,42,0.04)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80">
-							<p className="text-[10px] font-medium uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">Process</p>
-							<h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-slate-900 dark:text-white">Focused execution from strategy to launch.</h3>
-							<ul className="mt-5 space-y-3 text-slate-600 dark:text-slate-300">
-								{projectManagement.map((item) => (
-									<li key={item} className="flex items-start gap-3 rounded-2xl border border-slate-200/80 bg-slate-50 p-3 dark:border-slate-800 dark:bg-slate-900/80">
-										<span className="mt-1.5 h-2.5 w-2.5 rounded-full bg-sky-500" />
-										<span>{item}</span>
-									</li>
-								))}
-							</ul>
-						</div>
-						<div className="grid gap-4">
-							{projectSteps.map((item) => (
-								<article key={item.step} className="rounded-[1.7rem] border border-slate-200/80 bg-white/80 p-5 shadow-[0_18px_35px_rgba(15,23,42,0.03)] dark:border-slate-800 dark:bg-slate-950/80">
-									<p className="text-[10px] font-medium uppercase tracking-[0.35em] text-slate-500 dark:text-slate-300">{item.step}</p>
-									<h4 className="mt-3 text-xl font-semibold text-slate-900 dark:text-white">{item.title}</h4>
-									<p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">{item.text}</p>
-								</article>
-							))}
-						</div>
-					</section>
+					{/* Process Section */}
+					<section id="process" className="reveal-delay border-t border-[#f0f0f0] px-4 py-20 sm:px-6 lg:px-8">
+						<div className="mx-auto max-w-4xl">
+							<p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#888888]">Process</p>
+							<h3 className="mb-12 text-4xl font-black text-[#111111]">Our approach</h3>
 
-					<section id="portfolio" className="rounded-[2rem] border border-slate-200/80 bg-white/80 p-6 shadow-[0_20px_45px_rgba(15,23,42,0.04)] backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/80">
-						<div className="mb-6 flex flex-wrap items-end justify-between gap-3">
-							<div>
-								<p className="text-[10px] font-medium uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">Selected work</p>
-								<h3 className="mt-2 text-3xl font-semibold tracking-[-0.05em] text-slate-900 dark:text-white">Recent projects</h3>
-							</div>
-							<p className="max-w-xl text-sm text-slate-600 dark:text-slate-300">A closer look at digital products designed to feel premium and work with purpose.</p>
-						</div>
-						<div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-							{featuredProjects.map((project) => (
-								<article key={project.title} className="group overflow-hidden rounded-[1.7rem] border border-slate-200/80 bg-slate-50 shadow-[0_18px_35px_rgba(15,23,42,0.03)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_25px_50px_rgba(15,23,42,0.08)] dark:border-slate-800 dark:bg-slate-900/90">
-									<div className={`h-36 bg-gradient-to-r ${project.accent}`} />
-									<div className="p-5">
-										<p className="text-[10px] font-medium uppercase tracking-[0.3em] text-slate-500 dark:text-slate-300">{project.tag}</p>
-										<h4 className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-slate-900 dark:text-white">{project.title}</h4>
-										<p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{project.description}</p>
-										<div className="mt-4 flex flex-wrap gap-2">
-											{project.tech.map((item) => (
-												<span key={item} className="rounded-full bg-slate-200 px-2.5 py-1 text-[11px] font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200">{item}</span>
-											))}
-										</div>
-										{project.url ? (
-											<a className="mt-5 inline-flex rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700 dark:bg-sky-400 dark:text-slate-950 dark:hover:bg-sky-300" href={project.url} target="_blank" rel="noreferrer">View project</a>
-										) : null}
+							<div className="grid gap-8 sm:grid-cols-3">
+								{projectSteps.map((step) => (
+									<div key={step.step} className="space-y-4">
+										<div className="text-4xl font-black text-[#d0d0d0]">{step.step}</div>
+										<h4 className="text-xl font-bold text-[#111111]">{step.title}</h4>
+										<p className="text-sm leading-6 text-[#666666]">{step.text}</p>
 									</div>
-								</article>
-							))}
+								))}
+							</div>
 						</div>
 					</section>
 
-					<section id="contact" className="overflow-hidden rounded-[2rem] border border-slate-200/80 bg-[linear-gradient(135deg,#0d1726_0%,#101b2b_26%,#0b1220_100%)] p-6 text-slate-100 shadow-[0_30px_80px_rgba(15,23,42,0.16)] dark:border-slate-800">
-						<div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
-							<div>
-								<p className="text-[10px] font-medium uppercase tracking-[0.35em] text-sky-300">Start your project</p>
-								<h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-white">Let’s build something worth remembering.</h3>
-								<p className="mt-3 max-w-xl text-slate-300">From brand positioning to final launch, we help clients create digital experiences that feel premium, clear, and effective.</p>
+					{/* Portfolio Section */}
+					<section id="work" className="reveal-delay border-t border-[#f0f0f0] px-4 py-20 sm:px-6 lg:px-8">
+						<div className="mx-auto max-w-5xl">
+							<p className="mb-4 text-sm font-semibold uppercase tracking-wider text-[#888888]">Recent Work</p>
+							<h3 className="mb-12 text-4xl font-black text-[#111111]">Featured projects</h3>
+
+							<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+								{featuredProjects.map((project) => (
+									<a key={project.title} href={project.url} target="_blank" rel="noreferrer" className="group overflow-hidden rounded-2xl border border-[#e0e0e0] bg-[#f9f9f9] transition hover:border-[#111111] hover:shadow-lg">
+										<div className={`h-40 bg-gradient-to-r ${project.accent}`} />
+										<div className="p-6">
+											<p className="text-xs font-semibold uppercase text-[#888888]">{project.tag}</p>
+											<h4 className="mt-3 text-xl font-bold text-[#111111]">{project.title}</h4>
+											<p className="mt-2 text-sm leading-6 text-[#666666]">{project.description}</p>
+											<div className="mt-4 flex flex-wrap gap-2">
+												{project.tech.map((item) => (
+													<span key={item} className="rounded-full bg-white px-3 py-1 text-xs font-medium text-[#444444]">{item}</span>
+												))}
+											</div>
+											<div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#111111]">
+												View project →
+											</div>
+										</div>
+									</a>
+								))}
 							</div>
-							<div className="flex flex-wrap gap-3">
-								<a className="rounded-full bg-sky-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-300" href="/cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
-								<a className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:bg-slate-800" href="mailto:dev@fornubi.my.id">dev@fornubi.my.id</a>
-							</div>
-						</div>
-						<div className="mt-6 flex flex-wrap gap-3">
-							{socialLinks.map((item) => (
-								<a key={item.label} className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-100 transition hover:bg-slate-800" href={item.href} target="_blank" rel="noreferrer">{item.label}</a>
-							))}
 						</div>
 					</section>
 
-					<footer className="pb-6 text-center text-sm text-slate-500 dark:text-slate-400">{message || "Crafted for modern brands and premium digital experiences."}</footer>
+					{/* Contact/CTA Section */}
+					<section id="contact" className="reveal-delay border-t border-[#f0f0f0] bg-[#111111] px-4 py-24 text-white sm:px-6 lg:px-8">
+						<div className="mx-auto max-w-4xl text-center">
+							<h3 className="text-5xl font-black">Let's build something great.</h3>
+							<p className="mt-6 text-xl text-[#cccccc]">
+								Ready to elevate your brand or launch your next project? Let's talk about your vision.
+							</p>
+							<div className="mt-10 flex flex-wrap justify-center gap-4">
+								<a className="rounded-lg bg-white px-8 py-4 text-base font-bold text-[#111111] transition hover:bg-[#f0f0f0]" href="mailto:dev@fornubi.my.id">
+									dev@fornubi.my.id
+								</a>
+								<a className="rounded-lg border border-[#555555] px-8 py-4 text-base font-bold text-white transition hover:bg-[#2a2a2a]" href="#about">
+									Learn More
+								</a>
+							</div>
+
+							<div className="mt-12 flex justify-center gap-6">
+								{socialLinks.map((link) => (
+									<a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="text-sm text-[#999999] transition hover:text-white">
+										{link.label}
+									</a>
+								))}
+							</div>
+						</div>
+					</section>
+
+					{/* Footer */}
+					<footer className="border-t border-[#f0f0f0] bg-white px-4 py-8 text-center text-sm text-[#888888] sm:px-6 lg:px-8">
+						{message || "Crafted by fornubi — premium digital experiences"}
+					</footer>
 				</section>
 			</main>
 		</>
